@@ -18,9 +18,9 @@ public class Controller {
     @PostMapping(value = "/createCompass", consumes = "application/json")
     public void addSides(@RequestBody Map<String, String> sides) {
         for (Map.Entry<String, String> entry : sides.entrySet()) {
-            String side = entry.getKey(); // получаем сторону
-            Degrees degrees = new Degrees(entry.getValue()); // получаем градусы
-            compass.addSide(side, degrees); // добавляем в компас
+            String side = entry.getKey(); 
+            Degrees degrees = new Degrees(entry.getValue()); 
+            compass.addSide(side, degrees); 
         }
     }
 
